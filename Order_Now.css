@@ -1,0 +1,195 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+html
+{
+    scroll-behavior: smooth;
+}
+/************************ Navigation Bar ************************/
+
+#logo
+{
+    margin : 8px 34px;
+    padding: 2px;
+    transition: all 0.5s ease-in-out;
+}
+
+#logo:hover
+{
+    background-color: black;
+    border-radius: 20px;
+    transition: all 0.9s ease-in-out;
+}
+
+#logo img
+{
+    height: 80px;
+    width: 80px; 
+    margin: 3px 6px;
+}
+
+
+/* Navigation Bar: List Styling */
+#navbar
+{
+    display: flex;
+    align-items: center;
+    position : sticky;
+    top: 0px;
+    padding-right: 20px;
+    z-index: 1;
+}
+
+#navbar ul
+{
+    display: flex;
+    font-family: 'Baloo Bhai 2', cursive; 
+    margin-left: 484px;  
+}
+
+#navbar::before
+{
+    content: "";
+    background-color: Black;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.6;
+}
+
+#navbar ul li
+{
+    list-style: none;
+    font-size: 1.3rem;
+    padding: 5px;
+}
+
+#navbar ul li a
+{
+    transition: all 0.5s ease-in-out;
+    color: white;
+    display: block;
+    padding: 3px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+#navbar ul li a:hover
+{
+    color: white;
+    background-color: black;
+}
+
+ul
+{
+    cursor:pointer;
+}
+
+/* ****************************************** */
+
+h1
+{
+    text-align: center;
+    color: gray;
+    padding: 20px;
+}
+
+/* ****************************************** */
+
+.item1
+{
+    border: 5px solid gainsboro;
+    padding: 20px;
+    border-radius: 20px;
+}
+.items
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 30px 20px;
+    grid-column-gap: 20px;
+    grid-row-gap: 30px;
+}
+
+.item1 img
+{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: 0.2s ease;
+    border-radius: 20px;
+}
+
+.item1 img:hover
+{
+    transform: scale(1.04);
+}
+
+.item1 h4
+{
+    padding: 5px;
+    text-align: center;
+    font-family: 'Baloo Bhai 2', cursive;
+    font-size: 1.2rem;
+}
+
+.checked 
+{
+    color: orange;
+}
+
+.stars
+{
+    text-align: center;
+    padding: 5px 10px; 
+}
+
+.Order
+{
+    margin: 10px auto;
+}
+
+.item1 button
+{
+    display: flex;
+    padding: 5px 30px; 
+    border: none;
+    outline: none;
+    background-color: gray;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 20px;
+    display: block;
+    transition: 0.2s all;
+}
+
+.item1 button:hover
+{
+    transform: scale(1.08);
+    background-color: black;
+    transition: 0.4s all;
+}
+
+/* *********************************** */
+@media screen and (max-width: 1200px)
+{
+    .items
+    {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+
+@media screen and (max-width: 768px)
+{
+    .items
+    {
+        grid-template-columns: repeat(1, 1fr); 
+    }
+}
